@@ -1,5 +1,5 @@
 <h1 style="font-size: 50px; font-weight: bold; color: #0076ff; margin-bottom: 20px; text-align: center;">
-    Configuration Guide: GymBooking
+    GymBooking
 </h1>
 <h3 style="font-size: 15px; font-weight: bold; color: #0076ff; margin-bottom: 20px; text-align: center;">
     Team 4
@@ -10,11 +10,20 @@
     <br><br>
 </h3>
 
-# Description
-Gym Booking is a platform for managing classes at a gym, focused on scheduling and booking recurring classes. The system manages users, trainers, spaces, class categories, and schedules, allowing customers to sign up for available classes. In addition, administrative staff can track student attendance and monitor operational information for each class.
+
+<h1 style="font-size: 15px; font-weight: bold; color: #0076ff; margin-bottom: 20px; text-align: center;">
+    <br><br>
+    Description
+</h1>
+
+## Gym Booking is a platform for managing classes at a gym, focused on scheduling and booking recurring classes. The system manages users, trainers, spaces, class categories, and schedules, allowing customers to sign up for available classes. In addition, administrative staff can track student attendance and monitor operational information for each class.
 
 
-# Below is only a Blueprint
+
+<h1 style="font-size: 15px; font-weight: bold; color: #0076ff; margin-bottom: 20px; text-align: center;">
+    <br><br><br><br><br>
+    Configuration Guide | (Below is only a Blueprint)
+</h1>
 
 # Solution + the two projects (ControllerAPI host, EF Core class library)
 - dotnet new sln -n GymBooking
