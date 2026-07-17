@@ -10,6 +10,12 @@
     <br><br>
 </h3>
 
+# Description
+Gym Booking is a platform for managing classes at a gym, focused on scheduling and booking recurring classes. The system manages users, trainers, spaces, class categories, and schedules, allowing customers to sign up for available classes. In addition, administrative staff can track student attendance and monitor operational information for each class.
+
+
+# Below is only a Blueprint
+
 # Solution + the two projects (ControllerAPI host, EF Core class library)
 - dotnet new sln -n GymBooking
 - dotnet new classlib -n GymBooking.Data
