@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Cinema.ControllerApi/Cinema.ControllerApi.csproj" />
+  <Project Path="Cinema.Data/Cinema.Data.csproj" />
+</Solution>
