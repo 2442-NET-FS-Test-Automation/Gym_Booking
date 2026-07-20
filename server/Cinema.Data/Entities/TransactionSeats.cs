@@ -16,4 +16,6 @@ public class TransactionSeats
     [Required]
     public int Seat_Id {get; set; }
     public Seats Seat {get; set; } = default!;
+
+    public byte[] RowVersion {get; set; } = default!;
 }

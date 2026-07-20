@@ -65,5 +65,9 @@ public class CinemaDbContext : DbContext
         b.Entity<TransactionSeats>().HasOne(ts => ts.Transaction)
             .WithMany(t => t.transactionSeats)
             .HasForeignKey(ts => ts.Transaction_Id);
+
+        // Setting Row Version's properties
+        b.Entity<Transactions>().Property(i => i.RowVersion).IsRowVersion();
+        b.Entity<TransactionSeats>().Property(i => i.RowVersion).IsRowVersion();
     }
 }

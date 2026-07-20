@@ -27,4 +27,5 @@ public class Transactions
     public int Status {get; set; }
 
     public ICollection<TransactionSeats> transactionSeats {get; set; } = default!;
+    public byte[] RowVersion {get; set; } = default!;
 }
