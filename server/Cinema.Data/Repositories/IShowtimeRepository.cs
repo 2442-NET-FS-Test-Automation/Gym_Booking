@@ -5,4 +5,5 @@ namespace Cinema.Data;
 public interface IShowtimeRepository
 {
     public Task<IReadOnlyList<Showtimes>> GetShowtimesByCinemaAsync(int cinema_Id);
+    public Task<Showtimes> GetShowtimeById(int Showtime_Id);
 }

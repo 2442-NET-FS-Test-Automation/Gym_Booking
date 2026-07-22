@@ -15,4 +15,6 @@ public class ShowtimeService : IShowtimeService
 
     // Get a list of Showtimes that are available to see on some cinema
     public Task<IReadOnlyList<Showtimes>> GetByCinemaAsync(int cinema_Id) => _repo.GetShowtimesByCinemaAsync(cinema_Id);
+
+    public Task<Showtimes> GetShowtimeByIdAsync(int Showtime_Id) => _repo.GetShowtimeById(Showtime_Id);
 }

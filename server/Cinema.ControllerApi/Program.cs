@@ -20,6 +20,8 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddScoped<IShowtimeRepository, ShowtimeRepository>();
 builder.Services.AddScoped<IShowtimeService, ShowtimeService>();
+builder.Services.AddScoped<ISeatsRepository, SeatsRepository>();
+builder.Services.AddScoped<ISeatsService, SeatsService>();
 
 // Adding out mapping profile for AutoMapper
 builder.Services.AddAutoMapper(cfg => cfg.AddMaps(typeof(MappingProfile).Assembly));

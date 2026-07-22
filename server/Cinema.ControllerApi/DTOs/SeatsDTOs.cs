@@ -1,3 +1,5 @@
+using Cinema.Data.Entities;
+
 namespace Cinema.ControllerApi.DTOs;
 
-public record SeatsDTO(string Row, string Number, bool IsFree);
+public record SeatsDTO(int Seat_Id, string Row, string Number, Status IsFree);

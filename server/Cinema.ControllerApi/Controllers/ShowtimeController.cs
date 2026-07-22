@@ -28,4 +28,5 @@ public class ShowtimeController : ControllerBase
         IEnumerable<ShowtimeDto> mappedItems = _mapper.Map<IEnumerable<ShowtimeDto>>(showtimes);
         return Ok(mappedItems);
     }
+
 }

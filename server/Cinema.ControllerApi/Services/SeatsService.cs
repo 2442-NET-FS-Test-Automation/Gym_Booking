@@ -6,13 +6,14 @@ namespace Cinema.ControllerApi.Services;
 
 public class SeatsService : ISeatsService
 {
-    private readonly IShowtimeRepository _repo;
+    private readonly ISeatsRepository _repo;
 
-    public SeatsService(IShowtimeRepository repo)
+    public SeatsService(ISeatsRepository repo)
     {
         _repo = repo;
     }
 
     // Get a list of Seats and their status for a given showtime
-    public 
+    public Task<IReadOnlyList<(int Seat_Id, char Row, int Number, Status LastTransaction)>> GetSeatsByShowtimeAsync(int Showtime_Id)
+    => _repo.GetSeatsByShowtimeAsync(Showtime_Id);
 }
