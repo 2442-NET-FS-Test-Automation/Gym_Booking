@@ -8,6 +8,7 @@ public class MappingProfile : Profile
 {
     public MappingProfile()
     {
+        // Map Showtimes by Cinema
         CreateMap<Showtimes, ShowtimeDto>()
             .ForCtorParam("Showtime_Id", o => o.MapFrom(s => s.Showtime_Id))
             .ForCtorParam("Movie", o => o.MapFrom(s => s.Movie.Title))
@@ -16,5 +17,13 @@ public class MappingProfile : Profile
             .ForCtorParam("StartTime", o => o.MapFrom(s => s.StartTime))
             .ForCtorParam("EndTime", o => o.MapFrom(s => s.EndTime))
             .ForCtorParam("Price", o => o.MapFrom(s => s.Price));
+
+        // Map Seats by Showtime
+        CreateMap<(int Seat_Id, char Row, int Number, Status LastTransaction), SeatsDTO>()
+            .ForCtorParam("Seat_Id", o => o.MapFrom(s => s.Seat_Id))
+            .ForCtorParam("Row", o => o.MapFrom(s => s.Row))
+            .ForCtorParam("Number", o => o.MapFrom(s => s.Number))
+            .ForCtorParam("IsFree", o => o.MapFrom(s => s.LastTransaction));
+
     }
 }

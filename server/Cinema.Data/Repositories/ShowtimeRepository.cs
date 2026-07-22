@@ -21,4 +21,14 @@ public class ShowtimeRepository : IShowtimeRepository
             .Where(s => s.Room.Cinema_Id == cinema_Id && s.ShowDate.ToDateTime(s.EndTime) > DateTime.UtcNow)
             .ToListAsync();
     }
+
+    public async Task<Showtimes> GetShowtimeById(int Showtime_Id)
+    {
+        CinemaDbContext db = await _factory.CreateDbContextAsync();
+        return await db.Showtimes
+            .Include(s => s.Movie)
+            .Include(s => s.Room)
+            .Where(s => s.Showtime_Id == Showtime_Id)
+            .FirstAsync();
+    }
 }

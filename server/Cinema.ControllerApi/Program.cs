@@ -23,6 +23,8 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IArgon2Hasher, Argon2Hasher>();
 builder.Services.AddScoped<IShowtimeRepository, ShowtimeRepository>();
 builder.Services.AddScoped<IShowtimeService, ShowtimeService>();
+builder.Services.AddScoped<ISeatsRepository, SeatsRepository>();
+builder.Services.AddScoped<ISeatsService, SeatsService>();
 builder.Services.AddScoped<IUserService, UserService>();
 
 var jwtKey = builder.Configuration["JwtSettings:Secret"];
