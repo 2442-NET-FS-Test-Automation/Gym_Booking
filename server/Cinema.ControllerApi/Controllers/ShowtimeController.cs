@@ -20,7 +20,7 @@ public class ShowtimeController : ControllerBase
         _mapper = mapper;
     }
 
-    [HttpGet("{cinema_Id}")]
+    [HttpGet("Cinema-{cinema_Id}")]
     public async Task<ActionResult<IEnumerable<ShowtimeDto>>> GetByCinema(int cinema_Id)
     {
         IReadOnlyList<Showtimes> showtimes = await _service.GetByCinemaAsync(cinema_Id);
