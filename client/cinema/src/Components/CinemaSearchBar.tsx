@@ -5,14 +5,15 @@ interface CinemaSearchBarProps {
     cinemas: CinemaItem[];
 }
 
-const [query, setQuery] = useState("");
-const [isOpen, setIsOpen] = useState(false);
+
 
 export function CinemaSearchBar ({cinemas }: CinemaSearchBarProps) {
+    const [query, setQuery] = useState("");
+    const [isOpen, setIsOpen] = useState(false);
 
     // Filtering values
     const filteredItems = cinemas.filter((item) => 
-        item.CinemaName.toLowerCase().includes(query.toLowerCase()));
+        item.cinemaName?.toLowerCase().includes(query.toLowerCase()));
 
     return (
         <div className="Cinema-Search-Container">
@@ -23,17 +24,17 @@ export function CinemaSearchBar ({cinemas }: CinemaSearchBarProps) {
                 setQuery(e.target.value);
                 setIsOpen(true);}}
                 onFocus={() => setIsOpen(true)} />
-            {isOpen && filteredItems.length > 1 && (
+            {isOpen && filteredItems.length > 0 && (
                 <ul className="Cinema-Search-Options">
                     
                     {filteredItems.map((item) => (
                         <li className="Cinema-Search-Option-Row"
-                        key={item.Cinema_Id}
+                        key={item.cinema_Id}
                         onClick={() => {
-                            setQuery(item.CinemaName);
+                            setQuery(item.cinemaName);
                             setIsOpen(false);
                         }}>
-                            {item.CinemaName}
+                            {item.cinemaName}
                         </li>
                     ))}
                 </ul>

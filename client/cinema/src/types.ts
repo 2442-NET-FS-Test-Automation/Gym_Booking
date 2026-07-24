@@ -1,8 +1,8 @@
 
 export interface CinemaItem {
-    Cinema_Id: number;
-    CinemaName: string;
-    CinemaCity: string;
+    cinema_Id: number;
+    cinemaName: string;
+    cinemaCity: string;
 }
 
 export type FetchState = "idle" | "loading" | "loaded" | "failed";

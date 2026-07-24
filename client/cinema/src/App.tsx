@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from "./auth/AuthContext";
 import { ProtectedRoute } from "./auth/ProtectedRoute";
 import { LoginPage } from "./pages/LoginPage";
+import { SelectCinema } from "./pages/SelectCinema";
 // import { SelectCinema } from "./pages/SelectCinema";
 
 export default function App() {
@@ -14,7 +15,7 @@ export default function App() {
 
           {/* Rutas protegidas */}
           <Route element={<ProtectedRoute />}>
-            {/* <Route path="/" element={<SelectCinema />} /> */}
+            <Route path="/" element={<SelectCinema />} />
             {/* Other Path Routes Here: <Route path="/ETC ETC" element={<ETC ETC />} /> */}
           </Route>
 
